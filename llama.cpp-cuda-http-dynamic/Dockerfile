@@ -26,4 +26,4 @@ ENV PATH="/opt/llama.cpp/build/bin:$PATH"
 RUN mkdir -p /models
 WORKDIR /models
 
-CMD ["llama-server", "-m", "/models/current-model.gguf", "--port", "4040", "-c", "16384", "-np", "4", "--n-gpu-layers", "35", "--host", "0.0.0.0"]
+CMD ["llama-server", "-m", "/models/current-model.gguf", "--port", "4040", "-c", "16384", "-np", "4", "--n-gpu-layers", "35", "--host", "0.0.0.0", "--nowebserver"]
